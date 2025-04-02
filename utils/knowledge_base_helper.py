@@ -85,7 +85,8 @@ class KnowledgeBasesForAmazonBedrock:
             kb_name: str,
             kb_description: str = None,
             data_bucket_name: str = None,
-            embedding_model: str = "amazon.titan-embed-text-v2:0"
+            embedding_model: str = "amazon.titan-embed-text-v2:0",
+            bucket_prefix: str = None
     ):
         """
         Function used to create a new Knowledge Base or retrieve an existent one
@@ -176,7 +177,7 @@ class KnowledgeBasesForAmazonBedrock:
             print(f"Step 6 - Creating Knowledge Base")
             knowledge_base, data_source = self.create_knowledge_base(
                 collection_arn, index_name, data_bucket_name, embedding_model,
-                kb_name, kb_description, bedrock_kb_execution_role
+                kb_name, kb_description, bedrock_kb_execution_role, bucket_prefix
             )
             interactive_sleep(60)
             print("========================================================================================")
@@ -572,7 +573,7 @@ class KnowledgeBasesForAmazonBedrock:
     @retry(wait_random_min=1000, wait_random_max=2000, stop_max_attempt_number=7)
     def create_knowledge_base(
             self, collection_arn: str, index_name: str, bucket_name: str, embedding_model: str,
-            kb_name: str, kb_description: str, bedrock_kb_execution_role: str
+            kb_name: str, kb_description: str, bedrock_kb_execution_role: str, bucket_prefix: str
     ):
         """
         Create Knowledge Base and its Data Source. If existent, retrieve
@@ -611,7 +612,7 @@ class KnowledgeBasesForAmazonBedrock:
         # The data source to ingest documents from, into the OpenSearch serverless knowledge base index
         s3_configuration = {
             "bucketArn": f"arn:aws:s3:::{bucket_name}",
-            # "inclusionPrefixes":["*.*"] # you can use this if you want to create a KB using data within s3 prefixes.
+            "inclusionPrefixes":[bucket_prefix] # you can use this if you want to create a KB using data within s3 prefixes.
         }
 
         # The embedding model used by Bedrock to embed ingested documents, and realtime prompts

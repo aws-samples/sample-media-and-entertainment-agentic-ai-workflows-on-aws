@@ -1740,7 +1740,7 @@ class AgentsForAmazonBedrock:
                             print(colored(f'Used LLM tokens, in: {_in_tokens}, out: {_out_tokens}', "yellow"))
 
                     if trace_level == "all":
-                        print(json.dumps(_event['trace'], indent=2, ensure_ascii=False))
+                        print(json.dumps(_event['trace'], indent=2, ensure_ascii=False, default=str))
 
                 if 'files' in _event.keys() and enable_trace:
                     console = Console()
