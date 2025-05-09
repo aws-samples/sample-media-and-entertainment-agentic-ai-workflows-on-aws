@@ -1,0 +1,5 @@
+title_id: aws345901
+title: Coup Rising Protocol
+year: 2020
+duration: 60 mins
+genre: Political Thriller
