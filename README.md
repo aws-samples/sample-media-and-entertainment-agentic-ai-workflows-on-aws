@@ -8,18 +8,18 @@ The agents in this workshop is built using [Amazon Bedrock Agent](https://docs.a
 
 Within this series of labs, you'll explore some of the common use cases focused in media and entertainment. You'll learn how to implement agent patterns to build powerful systems that automate repeatable tasks, significantly improving productivity and efficiency across media workflows. These hands-on exercises will demonstrate how AI-powered agents can streamline content creation, metadata management, and other industry-specific processes.
 
-Labs include:
+Labs in the workshop include:
 
-01 - Amazon Q Business Action [Estimated time to complete - 45 mins] 
-02 - Prompt Chaining [Estimated time to complete - 45 mins]
-03 - Prompt Routing [Estimated time to complete - 30 mins]
-04 - Prompt Parallelization [Estimated time to complete - 44 mins]
-05 - Reflection [Estimated time to complete - 60 mins]
-06 - Tool Use [Estimated time to complete - 45 mins]
-07 - Multi Agent Collaboration [Estimated time to complete - 60 mins]
+- 01 - Amazon Q Business Action [Estimated time to complete - 45 mins] 
+- 02 - Prompt Chaining [Estimated time to complete - 45 mins]
+- 03 - Prompt Routing [Estimated time to complete - 30 mins]
+- 04 - Prompt Parallelization [Estimated time to complete - 44 mins]
+- 05 - Reflection [Estimated time to complete - 60 mins]
+- 06 - Tool Use [Estimated time to complete - 45 mins]
+- 07 - Multi Agent Collaboration [Estimated time to complete - 60 mins]
 
 ## Getting Started
-Depending on the lab, this workshop is run using AWS Console and Python notebooks. For python notebooks, you can run from the environment of your choice.
+Depending on the lab, this workshop is run using AWS Console and Python notebooks. For python notebooks, you can run from the environment of your choice. For labs that runs in AWS Console, navigate to the appropriate AWS Account and start the labs by following the instructions.
 
 For a fully-managed environment with rich AI/ML features, we'd recommend using SageMaker AI Studio. To get started quickly, you can refer to the instructions for domain quick setup.
 
