@@ -1,0 +1,73 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+        "Sid": "BedrockFlowPermissions",
+        "Effect": "Allow",
+        "Action": [
+            "bedrock:CreateFlow",
+            "bedrock:UpdateFlow",
+            "bedrock:GetFlow",
+            "bedrock:ListFlows",
+            "bedrock:DeleteFlow",
+            "bedrock:ValidateFlowDefinition",
+            "bedrock:CreateFlowVersion",
+            "bedrock:GetFlowVersion",
+            "bedrock:ListFlowVersions",
+            "bedrock:DeleteFlowVersion",
+            "bedrock:CreateFlowAlias",
+            "bedrock:UpdateFlowAlias",
+            "bedrock:GetFlowAlias",
+            "bedrock:ListFlowAliases",
+            "bedrock:DeleteFlowAlias",
+            "bedrock:InvokeFlow",
+            "bedrock:TagResource",
+            "bedrock:UntagResource",
+            "bedrock:ListTagsForResource"
+        ],
+        "Resource": "*"
+        },
+        {
+        "Sid": "BedrockResourcePermissions",
+        "Effect": "Allow",
+        "Action": [
+            "bedrock:ApplyGuardrail",
+            "bedrock:InvokeGuardrail",
+            "bedrock:InvokeModel",
+            "bedrock:GetCustomModel",
+            "bedrock:InvokeAgent",
+            "bedrock:Retrieve",
+            "bedrock:RetrieveAndGenerate",
+            "bedrock:GetPrompt",
+            "bedrock:ListPrompts",
+            "bedrock:RenderPrompt",
+            "bedrock:InvokeModel",
+            "bedrock:GetProvisionedModelThroughput",
+            "bedrock:GetInferenceProfile",
+            "bedrock:GetImportedModel"
+        ],
+        "Resource": "*"
+        },
+        {
+            "Sid": "GetBedrockResources",
+            "Effect": "Allow",
+            "Action": [
+                "bedrock:GetAgent",
+                "bedrock:GetKnowledgeBase",
+                "bedrock:GetGuardrail",
+                "bedrock:GetPrompt"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "S3related",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:ListBuckets"
+            ],
+            "Resource": "*"
+        }
+
+    ]
+}
