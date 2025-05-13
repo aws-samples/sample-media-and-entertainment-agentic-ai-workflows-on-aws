@@ -611,9 +611,11 @@ class KnowledgeBasesForAmazonBedrock:
 
         # The data source to ingest documents from, into the OpenSearch serverless knowledge base index
         s3_configuration = {
-            "bucketArn": f"arn:aws:s3:::{bucket_name}",
-            "inclusionPrefixes":[bucket_prefix] # you can use this if you want to create a KB using data within s3 prefixes.
+            "bucketArn": f"arn:aws:s3:::{bucket_name}"
         }
+        if len(bucket_prefix):
+            s3_configuration["inclusionPrefixes"] = [bucket_prefix] # you can use this if you want to create a KB using data within s3 prefixes.
+
 
         # The embedding model used by Bedrock to embed ingested documents, and realtime prompts
         embedding_model_arn = f"arn:aws:bedrock:{self.region_name}::foundation-model/{embedding_model}"
