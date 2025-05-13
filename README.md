@@ -4,7 +4,7 @@ Welcome to the Agentic AI for Media and Entertainment workshop. The goal of this
 
 The main audience for this workshop are developers, solution builders. This workshop introduces agents and workflows from the practical point view. The labs are designed to guide you through agent building processes step by step, from simple workflows like prompt chaining, to the most advanced patterns such as multi agent collaborations. 
 
-The agents in this workshop is built using [Amazon Bedrock Agent](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html), and [Prompt Flows](https://docs.aws.amazon.com/bedrock/latest/userguide/flows.html) and [Amazon Q Business](https://aws.amazon.com/q/business/)
+The agents in this workshop is built using [Amazon Bedrock Agent](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html), and [Bedrock Flows](https://docs.aws.amazon.com/bedrock/latest/userguide/flows.html) and [Amazon Q Business](https://aws.amazon.com/q/business/)
 
 Within this series of labs, you'll explore some of the common use cases focused in media and entertainment. You'll learn how to implement agent patterns to build powerful systems that automate repeatable tasks, significantly improving productivity and efficiency across media workflows. These hands-on exercises will demonstrate how AI-powered agents can streamline content creation, metadata management, and other industry-specific processes.
 
