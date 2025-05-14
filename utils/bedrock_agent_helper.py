@@ -40,7 +40,7 @@ import datetime
 from dateutil.relativedelta import relativedelta
 import random
 from io import BytesIO
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Any
 import re
 from boto3.session import Session
 from botocore.config import Config
@@ -972,7 +972,7 @@ class AgentsForAmazonBedrock:
         guardrail_id: str=None,
         kb_id: str=None,
         verbose: bool=False
-    ) -> Tuple[str, str, str]:
+    ) -> tuple[Any | None, str, Any, str]:
         """Creates an agent given a name, instructions, model, description, and optionally
         a set of knowledge bases. Action groups are added to the agent as a separate
         step once you have created the agent itself.
@@ -1068,7 +1068,7 @@ class AgentsForAmazonBedrock:
         _agent_alias_id = DEFAULT_ALIAS 
         _agent_alias_arn = _create_agent_response['agent']['agentArn'].replace("agent", "agent-alias") + f"/{_agent_alias_id}"
 
-        return _agent_id, _agent_alias_id, _agent_alias_arn
+        return _agent_id, _agent_alias_id, _agent_alias_arn, _role_arn
     
     def prepare(self, agent_name: str) -> None:
         """Prepares an agent for invocation.
