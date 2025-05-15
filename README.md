@@ -1,6 +1,8 @@
 # Agentic AI for Media and Entertainment
 
 ** WORK IN PROGRESS **
+This repository is under construction. When the all the official changes are committed, we'll remove this notification accordingly
+
 
 Welcome to the Agentic AI for Media and Entertainment workshop. The goal of this workshop is provide hands on experience of building applications using various AI patterns to effectively solve complex problems using Agents. 
 
