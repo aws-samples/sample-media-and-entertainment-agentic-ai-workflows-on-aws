@@ -31,8 +31,8 @@ The following instructions are focused on labs that are running in a python note
 To get started, run the following CLI command in your notebook environment.
 
 ```bash
-git clone https://github.com/aws-samples/media-and-entertainment-agentic-ai-workflows-on-aws.git
-cd media-and-entertainment-agentic-ai-workflows-on-aws
+git clone https://github.com/aws-samples/sample-media-and-entertainment-agentic-ai-workflows-on-aws.git
+cd sample-media-and-entertainment-agentic-ai-workflows-on-aws
 ```
 
 You're now ready to explore the lab notebooks! Start with [00-start-here.ipynb](00-start-here.ipynb).
