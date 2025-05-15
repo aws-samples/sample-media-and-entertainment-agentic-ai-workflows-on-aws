@@ -1,0 +1,39 @@
+{
+    "type": "Prompt",
+    "name": "Research_Entities",
+    "configuration": {
+        "prompt": {
+            "sourceConfiguration": {
+                "inline": {
+                    "modelId": "arn:aws:bedrock:{region}:{account_id}:inference-profile/us.amazon.nova-micro-v1:0",
+                    "templateType": "TEXT",
+                    "inferenceConfiguration": {
+                        "text": {
+                            "temperature": 0.0,
+                            "topP": 1.0,
+                            "maxTokens": 4096
+                        }
+                    },
+                    "templateConfiguration": {
+                        "text": {
+                            "text": "Create a query for an LLM that asks to find research material on the following entities:\n```json\n {{entities}} \n```\n\nSkip the preamble, your output should only include the query and nothing else.\n\nYour response should start with:\nCan you do indepth research about the following entities provided in JSON format, find as much relevant research material of a commercial, personal, financial nature as possible. Focus on all types of information which can help in writing a news article about the entities. Only add information if it is in the knowledge base. If an entity isn't found in your knowledge base, discard it from the output. Your output must be in markdown so that each entity is a heading, followed by the attributes and data you found. Insert a few new lines and then right at the bottom, maintain the original text for reference and context in string format under the heading \"News Facts\" . There should be no JSON in your output."
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "inputs": [
+        {
+            "name": "entities",
+            "type": "String",
+            "expression": "$.data"
+        }
+    ],
+    "outputs": [
+        {
+            "name": "modelCompletion",
+            "type": "String"
+        }
+    ]
+}
