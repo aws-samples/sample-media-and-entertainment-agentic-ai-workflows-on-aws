@@ -1920,6 +1920,59 @@ class AgentsForAmazonBedrock:
         self._bedrock_agent_client.prepare_agent(agentId=_agent_id)
 
         return _update_agent_response
+    
+    def update_agent_max_tokens(self, agent_id: str, max_tokens: int):
+        """Updates only the max tokens parameter of an agent while keeping all other settings.
+        
+        This function is specifically designed to update just the maximum token output
+        of a Bedrock agent without modifying any other configuration parameters.
+        
+        Args:
+            agent_id (str): The ID of the agent to update.
+            max_tokens (int): The new maximum token output value.
+            
+        Returns:
+            dict: UpdateAgent response.
+        """
+        # Get current agent details
+        _get_agent_response = self._bedrock_agent_client.get_agent(agentId=agent_id)
+        _agent_details = _get_agent_response.get('agent')
+        
+        # Extract required parameters for update
+        _agent_name = _agent_details['agentName']
+        _agent_resource_role_arn = _agent_details['agentResourceRoleArn']
+        _foundation_model = _agent_details['foundationModel']
+        _instruction = _agent_details['instruction']
+        _description = _agent_details.get('description', '')  # Preserve the description
+        
+        # Create the update configuration with just the required parameters
+        # and the new max tokens setting
+        _update_config = {
+            "agentId": agent_id,
+            "agentName": _agent_name,
+            "agentResourceRoleArn": _agent_resource_role_arn,
+            "foundationModel": _foundation_model,
+            "instruction": _instruction,
+            "description": _description,  # Include the description in the update
+            "promptOverrideConfiguration": {
+                "promptConfigurations": [
+                    {
+                        "basePromptTemplate": _agent_details.get('promptOverrideConfiguration', {}).get('promptConfigurations', [])[2].get('basePromptTemplate'),
+                        "promptType": "ORCHESTRATION",
+                        "promptCreationMode": "OVERRIDDEN",
+                        "inferenceConfiguration": {
+                            "maximumLength": max_tokens
+                        },
+                        "promptState": "ENABLED"
+                    }
+                ]
+            }
+        }
+        
+        # Update the agent
+        _update_agent_response = self._bedrock_agent_client.update_agent(**_update_config)
+        
+        return _update_agent_response
 
     def create_dynamodb(self, table_name, pk_item, sk_item):
         try:
