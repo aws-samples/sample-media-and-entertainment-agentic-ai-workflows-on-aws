@@ -1,0 +1,162 @@
+{
+  "factiva_company_id": "NRHLTH",
+  "company_name": "NeuraHealth Solutions, Inc.",
+  "ticker": "NRHL",
+  "exchange": "NASDAQ",
+  "company_overview": "NeuraHealth Solutions is a leading healthcare technology company specializing in AI-powered diagnostic and healthcare decision support systems. The company's flagship product, MediScan, uses machine learning algorithms to detect and diagnose medical conditions with high accuracy.",
+  "founding": {
+    "date": "2014-05-23",
+    "founders": [
+      "Marcus Williams",
+      "Dr. James Liu",
+      "Dr. Eliza Chen"
+    ],
+    "founding_location": "San Francisco, CA",
+    "founding_capital": "$28M Series A"
+  },
+  "executives": [
+    {
+      "name": "Marcus Williams",
+      "title": "Chief Executive Officer",
+      "appointed": "2014-05-23"
+    },
+    {
+      "name": "Dr. Eliza Chen",
+      "title": "Chief Medical Officer",
+      "appointed": "2015-03-15"
+    },
+    {
+      "name": "Raj Patel",
+      "title": "Senior Vice President, Product Development",
+      "appointed": "2016-08-01"
+    },
+    {
+      "name": "Sophia Rodriguez",
+      "title": "Chief Financial Officer",
+      "appointed": "2017-11-12"
+    },
+    {
+      "name": "James Liu",
+      "title": "Chief Technology Officer",
+      "appointed": "2014-08-29"
+    }
+  ],
+  "key_financials": {
+    "fiscal_year_end": "December 31",
+    "last_reported": "2024-Q1",
+    "market_cap": "$12.8B",
+    "revenue": {
+      "2023": "$870M",
+      "2022": "$705M",
+      "2021": "$512M",
+      "2020": "$335M",
+      "2019": "$243M"
+    },
+    "net_income": {
+      "2023": "$94M",
+      "2022": "$68M",
+      "2021": "$27M",
+      "2020": "-$15M",
+      "2019": "-$42M"
+    },
+    "r_and_d_expenditure": {
+      "2023": "$285M",
+      "2022": "$245M",
+      "2021": "$193M"
+    }
+  },
+  "funding_history": [
+    {
+      "date": "2014-02",
+      "round": "Seed",
+      "amount": "$4.5M",
+      "lead_investors": ["Breakthrough Ventures", "Health Innovation Capital"]
+    },
+    {
+      "date": "2014-09",
+      "round": "Series A",
+      "amount": "$28M",
+      "lead_investors": ["Sequoia Capital", "Kleiner Perkins"]
+    },
+    {
+      "date": "2016-03",
+      "round": "Series B",
+      "amount": "$65M",
+      "lead_investors": ["Andreessen Horowitz", "GV"]
+    },
+    {
+      "date": "2018-11",
+      "round": "Series C",
+      "amount": "$120M",
+      "lead_investors": ["SoftBank Vision Fund", "Tiger Global"]
+    },
+    {
+      "date": "2020-08",
+      "round": "Series D",
+      "amount": "$210M",
+      "lead_investors": ["Silver Lake Partners", "Wellington Management"]
+    },
+    {
+      "date": "2021-06",
+      "round": "IPO",
+      "amount": "$780M",
+      "lead_underwriters": ["Goldman Sachs", "Morgan Stanley", "J.P. Morgan"]
+    }
+  ],
+  "competitors": [
+    "IBM Watson Health",
+    "Google Health",
+    "Microsoft Healthcare",
+    "Tempus AI",
+    "Zebra Medical Vision",
+    "Viz.ai"
+  ],
+  "product_portfolio": [
+    {
+      "name": "MediScan",
+      "launch_date": "2024-04",
+      "category": "AI Diagnostic Platform",
+      "regulatory_status": "FDA approval pending (expected Q3 2024)"
+    },
+    {
+      "name": "NeuraHealth Cloud",
+      "launch_date": "2021-09",
+      "category": "Healthcare Data Platform",
+      "regulatory_status": "HIPAA Compliant, SOC 2 Type II Certified"
+    },
+    {
+      "name": "BioSignal Analytics",
+      "launch_date": "2019-05",
+      "category": "Patient Monitoring Software",
+      "regulatory_status": "FDA Cleared (2019)"
+    },
+    {
+      "name": "ClinicalAssist",
+      "launch_date": "2018-02",
+      "category": "Clinical Decision Support",
+      "regulatory_status": "FDA Cleared (2018)"
+    }
+  ],
+  "recent_news": [
+    {
+      "date": "2024-04-15",
+      "headline": "NeuraHealth Solutions Unveils Revolutionary AI-Powered Healthcare System",
+      "source": "BusinessWire"
+    },
+    {
+      "date": "2024-02-28",
+      "headline": "NeuraHealth Reports 23% Revenue Growth in FY2023",
+      "source": "Investor Relations"
+    },
+    {
+      "date": "2024-01-12",
+      "headline": "NeuraHealth Expands Partnership with Cleveland Clinic",
+      "source": "Healthcare IT News"
+    },
+    {
+      "date": "2023-11-05",
+      "headline": "NeuraHealth Acquires Medical Data Analytics Startup DataMed for $85M",
+      "source": "TechCrunch"
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "company_id": "MW-NRHL",
+  "company_name": "NeuraHealth Solutions",
+  "monitoring_period": {
+    "start": "2023-04-01",
+    "end": "2024-04-20"
+  },
+  "media_presence_summary": {
+    "total_mentions": 12485,
+    "sentiment_analysis": {
+      "positive": "62%",
+      "neutral": "28%",
+      "negative": "10%"
+    },
+    "mention_growth": "+37% YoY",
+    "peak_mention_date": "2024-04-15",
+    "peak_mention_count": 845
+  },
+  "media_coverage_by_type": {
+    "news_articles": 5230,
+    "press_releases": 84,
+    "blog_posts": 3120,
+    "social_media": 4051
+  },
+  "top_media_sources": [
+    {
+      "name": "TechCrunch",
+      "mentions": 87,
+      "sentiment": "68% positive"
+    },
+    {
+      "name": "CNBC",
+      "mentions": 65,
+      "sentiment": "72% positive"
+    },
+    {
+      "name": "Forbes",
+      "mentions": 62,
+      "sentiment": "77% positive"
+    },
+    {
+      "name": "Healthcare IT News",
+      "mentions": 118,
+      "sentiment": "81% positive"
+    },
+    {
+      "name": "MedTech Dive",
+      "mentions": 96,
+      "sentiment": "73% positive"
+    }
+  ],
+  "trending_topics": [
+    {
+      "keyword": "MediScan",
+      "mentions": 3204,
+      "sentiment": "75% positive"
+    },
+    {
+      "keyword": "AI diagnostics",
+      "mentions": 2851,
+      "sentiment": "66% positive"
+    },
+    {
+      "keyword": "healthcare AI",
+      "mentions": 2417,
+      "sentiment": "59% positive"
+    },
+    {
+      "keyword": "FDA approval",
+      "mentions": 1240,
+      "sentiment": "52% positive"
+    },
+    {
+      "keyword": "medical machine learning",
+      "mentions": 1105,
+      "sentiment": "71% positive"
+    }
+  ],
+  "key_events_coverage": [
+    {
+      "event": "MediScan Announcement",
+      "date": "2024-04-15",
+      "mentions": 845,
+      "sentiment": "79% positive",
+      "key_publications": ["BusinessWire", "TechCrunch", "CNBC", "The Verge", "Wired"]
+    },
+    {
+      "event": "Cleveland Clinic Partnership",
+      "date": "2024-01-12",
+      "mentions": 580,
+      "sentiment": "83% positive",
+      "key_publications": ["Healthcare IT News", "Modern Healthcare", "MedCity News"]
+    },
+    {
+      "event": "DataMed Acquisition",
+      "date": "2023-11-05",
+      "mentions": 612,
+      "sentiment": "76% positive",
+      "key_publications": ["Bloomberg", "Reuters", "TechCrunch"]
+    },
+    {
+      "event": "Q4 2023 Earnings",
+      "date": "2024-01-25",
+      "mentions": 425,
+      "sentiment": "68% positive",
+      "key_publications": ["CNBC", "Yahoo Finance", "Seeking Alpha"]
+    }
+  ],
+  "industry_comparison": {
+    "share_of_voice": "18%",
+    "industry_ranking": "3rd",
+    "sentiment_ranking": "2nd",
+    "mention_growth_ranking": "1st"
+  },
+  "influencer_engagement": [
+    {
+      "name": "Dr. Eric Topol",
+      "platform": "Twitter",
+      "mentions": 14,
+      "reach": "985K followers",
+      "sentiment": "Positive"
+    },
+    {
+      "name": "Ezra Klein",
+      "platform": "Twitter/Podcast",
+      "mentions": 3,
+      "reach": "2.7M followers",
+      "sentiment": "Neutral-Positive"
+    },
+    {
+      "name": "Karen DeSalvo",
+      "platform": "LinkedIn",
+      "mentions": 8,
+      "reach": "105K followers",
+      "sentiment": "Positive"
+    },
+    {
+      "name": "Andrew Ng",
+      "platform": "Twitter/LinkedIn",
+      "mentions": 6,
+      "reach": "3.2M followers",
+      "sentiment": "Very Positive"
+    }
+  ],
+  "crisis_monitoring": {
+    "potential_issues": [
+      {
+        "topic": "Data privacy concerns",
+        "mentions": 245,
+        "sentiment": "62% negative",
+        "peak_date": "2023-08-12",
+        "resolution_status": "Addressed through press release and policy update"
+      },
+      {
+        "topic": "DataHealth lawsuit",
+        "mentions": 412,
+        "sentiment": "48% negative",
+        "peak_date": "2022-03-20",
+        "resolution_status": "Settled, minimal ongoing coverage"
+      }
+    ]
+  }
+}

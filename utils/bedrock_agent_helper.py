@@ -167,7 +167,7 @@ class AgentsForAmazonBedrock:
 
         self._bedrock_agent_client = boto3.client("bedrock-agent")
 
-        long_invoke_time_config = Config(read_timeout=600)
+        long_invoke_time_config = Config(read_timeout=3600)
         self._bedrock_agent_runtime_client = boto3.client(
             "bedrock-agent-runtime", config=long_invoke_time_config
         )
@@ -1920,7 +1920,25 @@ class AgentsForAmazonBedrock:
         self._bedrock_agent_client.prepare_agent(agentId=_agent_id)
 
         return _update_agent_response
-    
+
+    # Helper function to find the right basepromptTemplate
+    def find_by_key_value_next(self, items, key, value):
+        return next((item for item in items if item[key] == value), None)
+
+    # This helps us grab the correct basePromptTemplate used for the orchestration step
+    def get_base_prompt_template(self, promptType, agentId):
+        # get all the info in the agent at the current state
+        agent_info = self._bedrock_agent_client.get_agent(agentId=agentId)
+
+        # Go through the results to find the info we need for update agent
+        # You can see the full response of get_agent here:
+        # https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/bedrock-agent/client/get_agent.html
+        prompt_orchestrations = agent_info['agent']['promptOverrideConfiguration']['promptConfigurations']
+        return self.find_by_key_value_next(prompt_orchestrations,
+                                           'promptType',
+                                           promptType)['basePromptTemplate']
+
+
     def update_agent_max_tokens(self, agent_id: str, max_tokens: int):
         """Updates only the max tokens parameter of an agent while keeping all other settings.
         
@@ -1944,7 +1962,8 @@ class AgentsForAmazonBedrock:
         _foundation_model = _agent_details['foundationModel']
         _instruction = _agent_details['instruction']
         _description = _agent_details.get('description', '')  # Preserve the description
-        
+        _prompt_template = self.get_base_prompt_template('ORCHESTRATION', agent_id)
+
         # Create the update configuration with just the required parameters
         # and the new max tokens setting
         _update_config = {
@@ -1957,7 +1976,7 @@ class AgentsForAmazonBedrock:
             "promptOverrideConfiguration": {
                 "promptConfigurations": [
                     {
-                        "basePromptTemplate": _agent_details.get('promptOverrideConfiguration', {}).get('promptConfigurations', [])[2].get('basePromptTemplate'),
+                        "basePromptTemplate": _prompt_template,
                         "promptType": "ORCHESTRATION",
                         "promptCreationMode": "OVERRIDDEN",
                         "inferenceConfiguration": {

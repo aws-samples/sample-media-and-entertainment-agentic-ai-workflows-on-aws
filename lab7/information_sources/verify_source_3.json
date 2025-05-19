@@ -1,0 +1,161 @@
+{
+  "ticker": "NRHL:US",
+  "company_name": "NEURAHEALTH SOLUTIONS INC",
+  "exchange": "NASDAQ GS",
+  "currency": "USD",
+  "company_description": "NeuraHealth Solutions Inc. develops and markets artificial intelligence solutions for healthcare providers. The Company offers diagnostic systems, clinical decision support tools, and predictive analytics software for hospitals, healthcare systems, and research institutions worldwide.",
+  "sector": "Health Care",
+  "industry": "Health Care Equipment & Services",
+  "sub_industry": "Health Care Technology",
+  "key_statistics": {
+    "market_cap": "12.82B",
+    "shares_outstanding": "78.45M",
+    "float": "63.2M",
+    "avg_volume_3m": "1.24M",
+    "beta": "1.32",
+    "price_to_earnings": "136.4",
+    "price_to_sales": "14.7",
+    "price_to_book": "8.9",
+    "dividend_yield": "0.0",
+    "52wk_high": "187.45",
+    "52wk_low": "105.22",
+    "current_price": "163.50"
+  },
+  "esg_scores": {
+    "environmental": "72.3",
+    "social": "85.1",
+    "governance": "79.8",
+    "total_esg": "78.4",
+    "percentile_rank": "91"
+  },
+  "analyst_ratings": {
+    "buy": 18,
+    "hold": 7,
+    "sell": 1,
+    "consensus": "BUY",
+    "avg_price_target": "185.00",
+    "high_target": "220.00",
+    "low_target": "140.00"
+  },
+  "major_holders": [
+    {
+      "name": "Vanguard Group Inc",
+      "shares": "6.54M",
+      "percent_outstanding": "8.34%"
+    },
+    {
+      "name": "BlackRock Inc",
+      "shares": "5.82M",
+      "percent_outstanding": "7.41%"
+    },
+    {
+      "name": "FMR LLC",
+      "shares": "4.13M",
+      "percent_outstanding": "5.27%"
+    },
+    {
+      "name": "State Street Corp",
+      "shares": "3.86M",
+      "percent_outstanding": "4.92%"
+    },
+    {
+      "name": "Marcus Williams",
+      "shares": "3.25M",
+      "percent_outstanding": "4.14%"
+    },
+    {
+      "name": "James Liu",
+      "shares": "2.68M",
+      "percent_outstanding": "3.42%"
+    },
+    {
+      "name": "T. Rowe Price Associates",
+      "shares": "2.37M",
+      "percent_outstanding": "3.02%"
+    }
+  ],
+  "earnings_history": [
+    {
+      "report_date": "2024-01-25",
+      "period": "Q4 2023",
+      "eps_estimate": "0.27",
+      "eps_actual": "0.31",
+      "surprise_percent": "14.81%"
+    },
+    {
+      "report_date": "2023-10-27",
+      "period": "Q3 2023",
+      "eps_estimate": "0.22",
+      "eps_actual": "0.25",
+      "surprise_percent": "13.64%"
+    },
+    {
+      "report_date": "2023-07-28",
+      "period": "Q2 2023",
+      "eps_estimate": "0.18",
+      "eps_actual": "0.21",
+      "surprise_percent": "16.67%"
+    },
+    {
+      "report_date": "2023-04-28",
+      "period": "Q1 2023",
+      "eps_estimate": "0.15",
+      "eps_actual": "0.16",
+      "surprise_percent": "6.67%"
+    }
+  ],
+  "capital_structure": {
+    "debt_to_equity": "0.42",
+    "long_term_debt": "$450M",
+    "total_debt": "$520M",
+    "cash_and_equivalents": "$780M"
+  },
+  "corporate_governance": {
+    "board_of_directors": [
+      {
+        "name": "Dr. Katherine Barnes",
+        "position": "Chairperson",
+        "background": "Former Dean, Stanford School of Medicine"
+      },
+      {
+        "name": "Marcus Williams",
+        "position": "CEO & Director"
+      },
+      {
+        "name": "Dr. Michael Johnson",
+        "position": "Director",
+        "background": "Chief Innovation Officer, Mayo Clinic"
+      },
+      {
+        "name": "Sandra Lee",
+        "position": "Director",
+        "background": "Former CTO, Medtronic"
+      },
+      {
+        "name": "Robert Chen",
+        "position": "Director",
+        "background": "Partner, New Enterprise Associates"
+      },
+      {
+        "name": "Amelia Richardson",
+        "position": "Director",
+        "background": "Former SVP, UnitedHealth Group"
+      },
+      {
+        "name": "Dr. Thomas Wright",
+        "position": "Director",
+        "background": "Professor of Medical Informatics, Johns Hopkins"
+      },
+      {
+        "name": "Raj Patel",
+        "position": "Senior Vice President",
+        "background": "Product Development, Microsoft"
+      },
+      {
+        "name": "Janet Kim",
+        "position": "Director",
+        "background": "VP of AI Research, Google"
+      }
+    ]
+  }
+}

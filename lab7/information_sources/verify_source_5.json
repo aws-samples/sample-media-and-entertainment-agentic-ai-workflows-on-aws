@@ -1,0 +1,201 @@
+{
+  "oc_company_number": "US_DE_5286921",
+  "company_name": "NEURAHEALTH SOLUTIONS, INC.",
+  "jurisdiction_code": "us_de",
+  "incorporation_date": "2014-05-23",
+  "company_type": "Corporation",
+  "registry_url": "https://icis.corp.delaware.gov/",
+  "current_status": "Active",
+  "registered_address": {
+    "street_address": "251 Little Falls Drive",
+    "locality": "Wilmington",
+    "region": "Delaware",
+    "postal_code": "19808",
+    "country": "United States"
+  },
+  "headquarters_address": {
+    "street_address": "800 Technology Drive",
+    "locality": "San Francisco",
+    "region": "California",
+    "postal_code": "94107",
+    "country": "United States"
+  },
+  "registered_agent": {
+    "name": "Corporation Service Company",
+    "address": "251 Little Falls Drive, Wilmington, DE 19808"
+  },
+  "registry_filings": [
+    {
+      "filing_type": "Annual Report",
+      "filing_date": "2024-03-15",
+      "filing_number": "2024AR-85624"
+    },
+    {
+      "filing_type": "Annual Report",
+      "filing_date": "2023-03-12",
+      "filing_number": "2023AR-78512"
+    },
+    {
+      "filing_type": "Annual Report",
+      "filing_date": "2022-03-18",
+      "filing_number": "2022AR-72156"
+    },
+    {
+      "filing_type": "Certificate of Amendment",
+      "filing_date": "2021-05-12",
+      "filing_number": "2021CA-45628",
+      "description": "Amendment related to IPO and capital structure"
+    },
+    {
+      "filing_type": "Annual Report",
+      "filing_date": "2021-03-22",
+      "filing_number": "2021AR-65489"
+    }
+  ],
+  "current_officers": [
+    {
+      "name": "Marcus Williams",
+      "position": "Chief Executive Officer",
+      "appointment_date": "2014-05-23",
+      "nationality": "United States",
+      "occupation": "Executive"
+    },
+    {
+      "name": "Sophia Rodriguez",
+      "position": "Chief Financial Officer",
+      "appointment_date": "2017-11-12",
+      "nationality": "United States",
+      "occupation": "Executive"
+    },
+    {
+      "name": "James Liu",
+      "position": "Secretary",
+      "appointment_date": "2014-05-23",
+      "nationality": "United States",
+      "occupation": "Executive"
+    }
+  ],
+  "executives": [
+    {
+      "name": "Dr. Eliza Chen",
+      "title": "Chief Medical Officer",
+      "appointed": "2015-03-15"
+    },
+    {
+      "name": "Raj Patel",
+      "title": "Senior Vice President, Product Development",
+      "appointed": "2016-08-01"
+    },
+    {
+      "name": "James Liu",
+      "title": "Chief Technology Officer",
+      "appointed": "2014-08-29"
+    }
+  ],
+  "previous_names": [
+    {
+      "company_name": "NeuraHealth Technologies, Inc.",
+      "effective_from": "2014-05-23",
+      "effective_to": "2016-08-15",
+      "name_change_filing": "2016CN-34521"
+    }
+  ],
+  "capital_structure": {
+    "authorized_capital": "$5,000,000",
+    "authorized_shares": "150,000,000",
+    "share_classes": [
+      {
+        "class": "Common Stock",
+        "par_value": "$0.001",
+        "authorized": "100,000,000"
+      },
+      {
+        "class": "Preferred Stock",
+        "par_value": "$0.001",
+        "authorized": "50,000,000"
+      }
+    ]
+  },
+  "corporate_grouping": {
+    "ultimate_beneficial_owners": [
+      {
+        "name": "Marcus Williams",
+        "ownership_percentage": "4.14%"
+      },
+      {
+        "name": "James Liu",
+        "ownership_percentage": "3.42%"
+      },
+      {
+        "name": "Institutional Investors (>5%)",
+        "ownership_percentage": "20.98%"
+      },
+      {
+        "name": "Public Float",
+        "ownership_percentage": "71.46%"
+      }
+    ],
+    "subsidiaries": [
+      {
+        "company_name": "NeuraHealth Data Systems, LLC",
+        "jurisdiction_code": "us_de",
+        "ownership_percentage": "100%",
+        "incorporation_date": "2018-04-17"
+      },
+      {
+        "company_name": "MediTech Analytics, Inc.",
+        "jurisdiction_code": "us_ca",
+        "ownership_percentage": "100%",
+        "incorporation_date": "2016-11-23",
+        "acquisition_date": "2020-07-15"
+      },
+      {
+        "company_name": "BioSignal Processing Ltd.",
+        "jurisdiction_code": "gb",
+        "ownership_percentage": "100%",
+        "incorporation_date": "2015-03-04",
+        "acquisition_date": "2018-09-28"
+      },
+      {
+        "company_name": "NeuraHealth Europe GmbH",
+        "jurisdiction_code": "de",
+        "ownership_percentage": "100%",
+        "incorporation_date": "2022-02-15"
+      }
+    ]
+  },
+  "state_registrations": [
+    {
+      "state": "California",
+      "registration_number": "CA-C3824519",
+      "registration_date": "2014-06-12",
+      "status": "Active"
+    },
+    {
+      "state": "New York",
+      "registration_number": "NY-5724681",
+      "registration_date": "2019-08-23",
+      "status": "Active"
+    },
+    {
+      "state": "Massachusetts",
+      "registration_number": "MA-001384295",
+      "registration_date": "2020-03-17",
+      "status": "Active"
+    },
+    {
+      "state": "Texas",
+      "registration_number": "TX-0803625412",
+      "registration_date": "2021-10-05",
+      "status": "Active"
+    }
+  ],
+  "financial_filings": {
+    "latest_tax_filing": "2023-04-15",
+    "tax_id": "82-3456789",
+    "regulatory_filings": {
+      "sec_central_index_key": "0001824567",
+      "sec_filings_url": "https://www.sec.gov/edgar/browse/?CIK=1824567"
+    }
+  }
+}
