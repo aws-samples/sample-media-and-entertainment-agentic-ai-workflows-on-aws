@@ -1,5 +1,9 @@
 # Agentic AI for Media and Entertainment
 
+** WORK IN PROGRESS **
+This repository is under construction. When the all the official changes are committed, we'll remove this notification accordingly
+
+
 Welcome to the Agentic AI for Media and Entertainment workshop. The goal of this workshop is provide hands on experience of building applications using various AI patterns to effectively solve complex problems using Agents. 
 
 The main audience for this workshop are developers, solution builders. This workshop introduces agents and workflows from the practical point view. The labs are designed to guide you through agent building processes step by step, from simple workflows like prompt chaining, to the most advanced patterns such as multi agent collaborations. 
@@ -31,23 +35,18 @@ The following instructions are focused on labs that are running in a python note
 To get started, run the following CLI command in your notebook environment.
 
 ```bash
-git clone https://github.com/aws-samples/media-and-entertainment-agentic-ai-workflows-on-aws.git
-cd media-and-entertainment-agentic-ai-workflows-on-aws
+git clone https://github.com/aws-samples/sample-media-and-entertainment-agentic-ai-workflows-on-aws.git
+cd sample-media-and-entertainment-agentic-ai-workflows-on-aws
 ```
 
 You're now ready to explore the lab notebooks! Start with [00-start-here.ipynb](00-start-here.ipynb).
 
-# Security
-The sample code; software libraries; command line tools; proofs of concept; templates; or other related technology (including any of the foregoing that are provided by our personnel) is provided to you as AWS Content under the AWS Customer Agreement, or the relevant written agreement between you and AWS (whichever applies). You should not use this AWS Content in your production accounts, or on production or other critical data. You are responsible for testing, securing, and optimizing the AWS Content, such as sample code, as appropriate for production grade use based on your specific quality control practices and standards. Deploying AWS Content may incur AWS charges for creating or using AWS chargeable resources, such as running Amazon EC2 instances or using Amazon S3 storage.
+## Security
+See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
 
-# License
+## License
 See [LICENSE](LICENSE)
 
-# Contributing
-See [CONTRIBUTING](CONTRIBUTING)
-
-
-
-
-
+## Contributing
+See [CONTRIBUTING](CONTRIBUTING.md)
 

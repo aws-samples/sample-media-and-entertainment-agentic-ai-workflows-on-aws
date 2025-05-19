@@ -1941,21 +1941,21 @@ class AgentsForAmazonBedrock:
 
     def update_agent_max_tokens(self, agent_id: str, max_tokens: int):
         """Updates only the max tokens parameter of an agent while keeping all other settings.
-        
+
         This function is specifically designed to update just the maximum token output
         of a Bedrock agent without modifying any other configuration parameters.
-        
+
         Args:
             agent_id (str): The ID of the agent to update.
             max_tokens (int): The new maximum token output value.
-            
+
         Returns:
             dict: UpdateAgent response.
         """
         # Get current agent details
         _get_agent_response = self._bedrock_agent_client.get_agent(agentId=agent_id)
         _agent_details = _get_agent_response.get('agent')
-        
+
         # Extract required parameters for update
         _agent_name = _agent_details['agentName']
         _agent_resource_role_arn = _agent_details['agentResourceRoleArn']
@@ -1987,10 +1987,10 @@ class AgentsForAmazonBedrock:
                 ]
             }
         }
-        
+
         # Update the agent
         _update_agent_response = self._bedrock_agent_client.update_agent(**_update_config)
-        
+
         return _update_agent_response
 
     def create_dynamodb(self, table_name, pk_item, sk_item):
