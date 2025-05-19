@@ -1,0 +1,66 @@
+## Researched Entities
+
+- **entity_id: 1**
+  **text:** NeuraHealth Solutions
+  **type:** ORGANIZATION
+  **subtype:** Corporation
+  **confidence:** 0.95
+  **research:**
+    - NeuraHealth Solutions is a leading healthcare technology company specializing in AI-powered diagnostic and healthcare decision support systems.
+    - The company's flagship product, MediScan, uses machine learning algorithms to detect and diagnose medical conditions with high accuracy.
+    - NeuraHealth Solutions reported a revenue of $870 million in 2023, marking a 23% growth from the previous year.
+    - The company has expanded its partnership with Cleveland Clinic and acquired DataMed for $85 million in 2023.
+    - NeuraHealth Solutions has a market capitalization of $12.8 billion and is listed on NASDAQ under the ticker symbol NRHL.
+
+- **entity_id: 2**
+  **text:** MediScan
+  **type:** PRODUCT
+  **subtype:** Medical Diagnostic Platform
+  **confidence:** 0.95
+  **research:**
+    - MediScan is an AI-powered diagnostic platform developed by NeuraHealth Solutions.
+    - The platform demonstrated 94% accuracy in early disease detection across a trial of 12,000 patients.
+    - MediScan is expected to receive FDA approval by the third quarter of 2024.
+    - The platform will be piloted at five major hospital networks starting next month.
+    - Initial focus areas include cardiovascular disease, diabetes, and early cancer detection.
+
+- **entity_id: 3**
+  **text:** Dr. Eliza Chen
+  **type:** PERSON
+  **subtype:** Expert
+  **confidence:** 0.95
+  **research:**
+    - Dr. Eliza Chen is the Chief Medical Officer at NeuraHealth Solutions.
+    - She revealed that the MediScan system was trained on 50 million anonymized patient records.
+    - Dr. Chen has a background in medical diagnostics and has contributed to several research papers in the field.
+
+- **entity_id: 4**
+  **text:** Marcus Williams
+  **type:** PERSON
+  **subtype:** Executive
+  **confidence:** 0.95
+  **research:**
+    - Marcus Williams is the Chief Executive Officer of NeuraHealth Solutions.
+    - He announced the launch of MediScan at the annual developer conference.
+    - Under his leadership, the company invested $450 million in research and development over three years.
+
+- **entity_id: 5**
+  **text:** Raj Patel
+  **type:** PERSON
+  **subtype:** Executive
+  **confidence:** 0.95
+  **research:**
+    - Raj Patel is the Senior Vice President of Product Development at NeuraHealth Solutions.
+    - He confirmed that FDA approval for MediScan is expected by the third quarter.
+    - Raj Patel has been with the company since 2016 and has played a key role in the development of several products.
+
+
+## New Facts
+
+- NeuraHealth Solutions announced its new medical diagnostic platform called "MediScan" at their annual developer conference yesterday.
+- The system demonstrated 94% accuracy in early disease detection across a trial of 12,000 patients.
+- Dr. Eliza Chen, Chief Medical Officer at NeuraHealth, revealed the system was trained on 50 million anonymized patient records.
+- NeuraHealth CEO Marcus Williams stated the company invested $450 million in research and development over three years.
+- The platform will be piloted at five major hospital networks starting next month.
+- Senior Vice President of Product Development, Raj Patel, confirmed that FDA approval is expected by the third quarter.
+- Initial focus areas include cardiovascular disease, diabetes, and early cancer detection.

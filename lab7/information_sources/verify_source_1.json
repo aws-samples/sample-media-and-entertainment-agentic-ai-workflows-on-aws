@@ -1,0 +1,82 @@
+{
+  "company_id": "LN-456982",
+  "company_name": "NeuraHealth Solutions, Inc.",
+  "legal_name": "NeuraHealth Solutions, Inc.",
+  "company_type": "Public Corporation",
+  "stock_symbol": "NASDAQ:NRHL",
+  "incorporation_date": "2014-05-23",
+  "incorporation_state": "Delaware",
+  "headquarters": {
+    "address": "800 Technology Drive",
+    "city": "San Francisco",
+    "state": "California",
+    "zip": "94107",
+    "country": "United States"
+  },
+  "industry_classification": {
+    "primary_sic": "3845",
+    "primary_sic_description": "Electromedical and Electrotherapeutic Apparatus",
+    "secondary_sic": "7372",
+    "secondary_sic_description": "Software Publishers",
+    "naics": "334510",
+    "naics_description": "Electromedical and Electrotherapeutic Apparatus Manufacturing"
+  },
+  "company_size": {
+    "employee_count": 2460,
+    "employee_range": "1000-5000",
+    "revenue": "$870M",
+    "revenue_range": "$500M-$1B"
+  },
+  "company_status": "Active",
+  "credit_rating": "A-",
+  "duns_number": "07-854-3982",
+  "parent_company": null,
+  "subsidiaries": [
+    "NeuraHealth Data Systems, LLC",
+    "MediTech Analytics, Inc. (acquired 2020)",
+    "BioSignal Processing Ltd. (acquired 2018)"
+  ],
+  "executives": [
+    {
+      "name": "Marcus Williams",
+      "title": "Chief Executive Officer",
+      "appointed": "2014-05-23"
+    },
+    {
+      "name": "Dr. Eliza Chen",
+      "title": "Chief Medical Officer",
+      "appointed": "2015-03-15"
+    },
+    {
+      "name": "Raj Patel",
+      "title": "Senior Vice President, Product Development",
+      "appointed": "2016-08-01"
+    },
+    {
+      "name": "Sophia Rodriguez",
+      "title": "Chief Financial Officer",
+      "appointed": "2017-11-12"
+    },
+    {
+      "name": "James Liu",
+      "title": "Chief Technology Officer",
+      "appointed": "2014-08-29"
+    }
+  ],
+  "regulatory_filings": {
+    "sec_filings": "https://www.sec.gov/edgar/searchedgar/companysearch.html",
+    "patent_filings": 187,
+    "litigation_history": [
+      {
+        "case_number": "CV-2022-8754",
+        "court": "Northern District of California",
+        "plaintiff": "DataHealth Systems, Inc.",
+        "filing_date": "2022-03-17",
+        "nature": "Patent Infringement",
+        "status": "Settled",
+        "resolution_date": "2023-01-25"
+      }
+    ]
+  },
+  "compliance_status": "No significant compliance issues found"
+}

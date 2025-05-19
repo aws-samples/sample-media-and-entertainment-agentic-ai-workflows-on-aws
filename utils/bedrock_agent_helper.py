@@ -167,7 +167,7 @@ class AgentsForAmazonBedrock:
 
         self._bedrock_agent_client = boto3.client("bedrock-agent")
 
-        long_invoke_time_config = Config(read_timeout=600)
+        long_invoke_time_config = Config(read_timeout=3600)
         self._bedrock_agent_runtime_client = boto3.client(
             "bedrock-agent-runtime", config=long_invoke_time_config
         )
@@ -1918,6 +1918,78 @@ class AgentsForAmazonBedrock:
         
         #Prepare Agent
         self._bedrock_agent_client.prepare_agent(agentId=_agent_id)
+
+        return _update_agent_response
+
+    # Helper function to find the right basepromptTemplate
+    def find_by_key_value_next(self, items, key, value):
+        return next((item for item in items if item[key] == value), None)
+
+    # This helps us grab the correct basePromptTemplate used for the orchestration step
+    def get_base_prompt_template(self, promptType, agentId):
+        # get all the info in the agent at the current state
+        agent_info = self._bedrock_agent_client.get_agent(agentId=agentId)
+
+        # Go through the results to find the info we need for update agent
+        # You can see the full response of get_agent here:
+        # https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/bedrock-agent/client/get_agent.html
+        prompt_orchestrations = agent_info['agent']['promptOverrideConfiguration']['promptConfigurations']
+        return self.find_by_key_value_next(prompt_orchestrations,
+                                           'promptType',
+                                           promptType)['basePromptTemplate']
+
+
+    def update_agent_max_tokens(self, agent_id: str, max_tokens: int):
+        """Updates only the max tokens parameter of an agent while keeping all other settings.
+
+        This function is specifically designed to update just the maximum token output
+        of a Bedrock agent without modifying any other configuration parameters.
+
+        Args:
+            agent_id (str): The ID of the agent to update.
+            max_tokens (int): The new maximum token output value.
+
+        Returns:
+            dict: UpdateAgent response.
+        """
+        # Get current agent details
+        _get_agent_response = self._bedrock_agent_client.get_agent(agentId=agent_id)
+        _agent_details = _get_agent_response.get('agent')
+
+        # Extract required parameters for update
+        _agent_name = _agent_details['agentName']
+        _agent_resource_role_arn = _agent_details['agentResourceRoleArn']
+        _foundation_model = _agent_details['foundationModel']
+        _instruction = _agent_details['instruction']
+        _description = _agent_details.get('description', '')  # Preserve the description
+        _prompt_template = self.get_base_prompt_template('ORCHESTRATION', agent_id)
+
+        # Create the update configuration with just the required parameters
+        # and the new max tokens setting
+        _update_config = {
+            "agentId": agent_id,
+            "agentName": _agent_name,
+            "agentResourceRoleArn": _agent_resource_role_arn,
+            "foundationModel": _foundation_model,
+            "instruction": _instruction,
+            "description": _description,  # Include the description in the update
+            "promptOverrideConfiguration": {
+                "promptConfigurations": [
+                    {
+                        "basePromptTemplate": _prompt_template,
+                        "promptType": "ORCHESTRATION",
+                        "promptCreationMode": "OVERRIDDEN",
+                        "inferenceConfiguration": {
+                            "maximumLength": max_tokens
+                        },
+                        "promptState": "ENABLED"
+                    }
+                ]
+            }
+        }
+
+        # Update the agent
+        _update_agent_response = self._bedrock_agent_client.update_agent(**_update_config)
 
         return _update_agent_response
 

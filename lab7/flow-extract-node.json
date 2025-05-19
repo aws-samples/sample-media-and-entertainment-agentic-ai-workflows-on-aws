@@ -1,39 +1,39 @@
 {
-    "type": "Prompt",
-    "name": "Extract_Entities",
-    "configuration": {
-        "prompt": {
-            "sourceConfiguration": {
-                "inline": {
-                    "modelId": "arn:aws:bedrock:{region}:{account_id}:inference-profile/us.amazon.nova-lite-v1:0",
-                    "templateType": "TEXT",
-                    "inferenceConfiguration": {
-                        "text": {
-                            "temperature": 0.0,
-                            "topP": 1.0,
-                            "maxTokens": 2048
-                        }
-                    },
-                    "templateConfiguration": {
-                        "text": {
-                            "text": "Your primary function is to extract entities (specifically people and companies/organizations) from {{news_facts}} collected by a journalist at a news event and output them in machine-readable JSON format. You must identify all relevant entities while maintaining context about their relationships and relevance. Your output will be used to determine if the entities exist or are fabricated. It is important that your output is machine-readable JSON only.\n\nInput Processing:\n1. Accept text input of any length from journalists\n2. Process all forms of journalistic content: news articles, interview transcripts, press releases, notes, etc.\n3. Maintain the original text for reference and context\n\nEntity Recognition Methodology:\n1. Extract full names of people (first, middle, last) where available\n2. Extract complete company/organization names, including legal designations (Inc., LLC, etc.)\n3. Recognize and extract aliases, nicknames, and abbreviated forms of entities\n4. Identify entities even when they appear in different linguistic forms (e.g., possessive, plural)\n5. Consider contextual information to accurately identify entities (titles, roles, locations)\n\nEntity Classification:\nCategorize each entity as either:\nPERSON: Individual human beings\nORGANIZATION: Companies, corporations, agencies, institutions, etc.\n\nAssign specific sub-classifications when possible:\nFor PERSON: Political figure, executive, celebrity, expert, etc.\nFor ORGANIZATION: Corporation, government agency, non-profit, educational institution, etc.\n\nContextual Information Extraction:\nFor each entity, extract and preserve:\n1. Contextual role/title (CEO, President, Senator, etc.)\n2. Associated organizations (for people)\n\nConfidence Scoring:\nAssign a confidence score (0.0-1.0).\n\nLimitations and Boundaries\n1. Do not attempt to verify entities' existence (this is for the downstream agent)\n2. Do not add information about entities not present in the input text\n3. Do not make assumptions about entities beyond what is explicitly or implicitly stated\n4. Focus only on people and organizations; ignore other entity types\n\n\nOutput Format\n\nStructure output in a consistent, machine-readable format. Each entity should only have the following fields:\n<entityDictionary>\n{\n  \"entity_id\": unique identifier,\n  \"text\": extracted text of the entity,\n  \"type\": \"PERSON\" or \"ORGANIZATION\",\n  \"subtype\": specific classification,\n  \"confidence\": confidence score\n}\n</entityDictionary>\n\nDo all your thinking in <extractThinking> tags, and do not include these tags in the final output. If you have to flag anything for human review make sure that is part of the JSON output. \nDo not add preambles to your answer, and ensure your output is a single JSON object only."
-                        }
-                    }
-                }
+  "type": "Prompt",
+  "name": "Extract_Entities",
+  "configuration": {
+    "prompt": {
+      "sourceConfiguration": {
+        "inline": {
+          "modelId": "arn:aws:bedrock:{region}:{account_id}:inference-profile/us.amazon.nova-lite-v1:0",
+          "templateType": "TEXT",
+          "inferenceConfiguration": {
+            "text": {
+              "temperature": 0.0,
+              "topP": 1.0,
+              "maxTokens": 2048
             }
+          },
+          "templateConfiguration": {
+            "text": {
+              "text": "Your primary function is to extract entities (specifically people, companies/organizations, and products) from {{news_facts}} collected by a journalist at a news event and output them in consistent markdown format. You must identify all relevant entities while maintaining context about their relationships and relevance. Your output will be used to determine if the entities exist or are fabricated. It is important that your output is in markdown format only.\n\nInput Processing:\n1. Accept text input of any length from journalists\n2. Process all forms of journalistic content: news articles, interview transcripts, press releases, notes, etc.\n3. Maintain the original text for reference and context\n\nEntity Recognition Methodology:\n1. Extract full names of people (first, middle, last) where available\n2. Extract complete company/organization names, including legal designations (Inc., LLC, etc.)\n3. Recognize and extract aliases, nicknames, and abbreviated forms of entities\n4. Identify entities even when they appear in different linguistic forms (e.g., possessive, plural)\n5. Consider contextual information to accurately identify entities (titles, roles, locations)\n\nEntity Classification:\nCategorize each entity as either:\nPERSON: Individual human beings\nORGANIZATION: Companies, corporations, agencies, institutions, etc.\nPRODUCT: products, items, goods, etc.\n\nAssign specific sub-classifications when possible:\nFor PERSON: Political figure, executive, celebrity, expert, etc.\nFor ORGANIZATION: Corporation, government agency, non-profit, educational institution, etc.\nFor PRODUCT: type, industry\n\nContextual Information Extraction:\nFor each entity, extract and preserve:\n1. Contextual role/title (CEO, President, Senator, etc.)\n2. Associated organizations (for people)\n\nConfidence Scoring:\nAssign a confidence score (0.0-1.0).\n\nLimitations and Boundaries\n1. Do not attempt to verify entities' existence (this is for the downstream agent)\n2. Do not add information about entities not present in the input text\n3. Do not make assumptions about entities beyond what is explicitly or implicitly stated\n4. Focus only on people and organizations; ignore other entity types\n\nOutput Format\nStructure output in two sections in consistent markdown format. The first section will be titled \"Entities\" and it will be a list of the entities that you have identified. Each entity should only have the following attributes:\nentity_id: unique identifier\ntext: extracted text of the entity\ntype: PERSON or ORGANIZATION or PRODUCT\nsubtype: specific classification\nconfidence: confidence score\n\nThe second section will be titled \"New Facts\" and will be followed by {news_facts}}.\n\nDo not add preambles to your answer. Make sure your answer is in markdown format."
+            }
+          }
         }
-    },
-    "inputs": [
-        {
-            "name": "news_facts",
-            "type": "String",
-            "expression": "$.data"
-        }
-    ],
-    "outputs": [
-        {
-            "name": "modelCompletion",
-            "type": "String"
-        }
-    ]
+      }
+    }
+  },
+  "inputs": [
+    {
+      "name": "news_facts",
+      "type": "String",
+      "expression": "$.data"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "modelCompletion",
+      "type": "String"
+    }
+  ]
 }
