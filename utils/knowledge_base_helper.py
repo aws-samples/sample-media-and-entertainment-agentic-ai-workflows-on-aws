@@ -29,6 +29,7 @@ from opensearchpy import OpenSearch, RequestsHttpConnection, AWSV4SignerAuth, Re
 import pprint
 from retrying import retry
 import random
+import os
 
 valid_embedding_models = [
     "cohere.embed-multilingual-v3", "cohere.embed-english-v3", "amazon.titan-embed-text-v1",
@@ -894,3 +895,12 @@ class KnowledgeBasesForAmazonBedrock:
             for obj in objects['Contents']:
                 self.s3_client.delete_object(Bucket=bucket_name, Key=obj['Key'])
         self.s3_client.delete_bucket(Bucket=bucket_name)
+
+
+def upload_directory(path, bucket_name, bucket_prefix):
+    s3_client = boto3.client('s3')
+    for root,dirs,files in os.walk(path):
+        for file in files:
+            file_to_upload = os.path.join(root,file)
+            print(f"uploading file {file_to_upload} to {bucket_name}")
+            s3_client.upload_file(file_to_upload,bucket_name,f"{bucket_prefix}{file}")
