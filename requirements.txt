@@ -14,6 +14,5 @@ boto3
 crewai[tools]
 strands-agents 
 strands-agents-tools
-strands_tools
 langgraph
 langgraph-supervisor
