@@ -1,0 +1,23 @@
+{
+    "type": "KnowledgeBase",
+    "name": "Information_Source",
+    "configuration": {
+        "knowledgeBase": {
+            "knowledgeBaseId": "{lab7_kb_id}",
+            "modelId": "arn:aws:bedrock:{region}:{account_id}:inference-profile/us.amazon.nova-micro-v1:0"
+        }
+    },
+    "inputs": [
+        {
+            "name": "retrievalQuery",
+            "type": "String",
+            "expression": "$.data"
+        }
+    ],
+    "outputs": [
+        {
+            "name": "outputText",
+            "type": "String"
+        }
+    ]
+}
