@@ -9,3 +9,10 @@ events
 matplotlib
 requests
 python-dotenv
+langchain-aws 
+boto3
+crewai[tools]
+strands-agents 
+strands-agents-tools
+langgraph
+langgraph-supervisor

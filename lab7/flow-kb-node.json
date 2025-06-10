@@ -3,7 +3,7 @@
     "name": "Information_Source",
     "configuration": {
         "knowledgeBase": {
-            "knowledgeBaseId": "{kb_id}",
+            "knowledgeBaseId": "{lab7_kb_id}",
             "modelId": "arn:aws:bedrock:{region}:{account_id}:inference-profile/us.amazon.nova-micro-v1:0"
         }
     },
