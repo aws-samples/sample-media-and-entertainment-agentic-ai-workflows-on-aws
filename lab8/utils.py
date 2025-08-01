@@ -180,7 +180,26 @@ def create_agentcore_role(agent_name):
                   f"arn:aws:bedrock-agentcore:{region}:{account_id}:workload-identity-directory/default",
                   f"arn:aws:bedrock-agentcore:{region}:{account_id}:workload-identity-directory/default/workload-identity/{agent_name}-*"
                 ]
-            }
+            },
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "secretsmanager:GetSecretValue",
+                    "secretsmanager:DescribeSecret",
+                    "secretsmanager:ListSecrets"
+                ],
+                "Resource": "*"
+            },
+            {
+            "Effect": "Allow",
+            "Action": [
+                "ssm:GetParameter",
+                "ssm:GetParameters",
+                "ssm:GetParametersByPath",
+                "ssm:DescribeParameters"
+            ],
+            "Resource": "*"
+        }
         ]
     }
     assume_role_policy_document = {

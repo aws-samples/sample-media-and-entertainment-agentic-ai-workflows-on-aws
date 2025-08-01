@@ -5,3 +5,6 @@ __pycache__/
 .idea
 news_story_generator_agent_local.py
 news_story_generator_agent.py
+package/
+*.zip
+lab8/Dockerfile
