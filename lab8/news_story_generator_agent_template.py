@@ -197,7 +197,7 @@ def research_agent(news_facts: str) -> str:
         input={ 'text': research_query },
         retrieveAndGenerateConfiguration={
             'knowledgeBaseConfiguration': {
-                'knowledgeBaseId': "JWQDUYIJZG",
+                'knowledgeBaseId': "{{lab7_kb_id}}",
                 'modelArn': f"arn:aws:bedrock:us-east-1:{account_id}:inference-profile/us.amazon.nova-micro-v1:0",
                 'retrievalConfiguration': {
                     'vectorSearchConfiguration': {

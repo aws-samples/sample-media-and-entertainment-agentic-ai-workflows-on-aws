@@ -16,3 +16,5 @@ strands-agents
 strands-agents-tools
 langgraph
 langgraph-supervisor
+bedrock-agentcore
+bedrock-agentcore-starter-toolkit
