@@ -229,6 +229,7 @@ def article_generation_agent(query: str) -> str:
 
     # Create a BedrockModel with specific configuration
     article_generation_model = BedrockModel(
+        # model_id="us.anthropic.claude-3-5-haiku-20241022-v1:0",
         model_id="us.amazon.nova-pro-v1:0",
         region_name=region,
         temperature=0.5,
@@ -315,7 +316,7 @@ def article_reviewer_agent(article_text: str) -> str:
     
     # Create a BedrockModel with specific configuration
     article_reviewer_model = BedrockModel(
-        model_id="us.amazon.nova-pro-v1:0",
+        model_id="us.amazon.nova-micro-v1:0",
         region_name=region,
         temperature=0.1,
         top_k=1.0,
@@ -367,8 +368,7 @@ Your feedback should be constructive and actionable, focusing on strengthening t
     formatted_response = f"<review_feedback>{response}</review_feedback>"
     return formatted_response
 
-async def interface_supervisor_agent(payload, context=None):
-# def interface_supervisor_agent(news_facts: str) -> str:
+def interface_supervisor_agent(payload, context=None):
     """
     Orchestrates a complete news article generation workflow using specialized agents.
     
@@ -386,11 +386,14 @@ async def interface_supervisor_agent(payload, context=None):
         A professionally written and reviewed news article
     """
     print("Interface Supervisor agent processing...")
+    if context:
+        print("Runtime Session ID:", context.session_id)
     news_facts = payload["query"]
 
     # Create a BedrockModel with specific configuration
     interface_supervisor_model = BedrockModel(
-        model_id="us.amazon.nova-pro-v1:0",
+        # model_id="us.amazon.nova-pro-v1:0",
+        model_id="us.anthropic.claude-3-5-haiku-20241022-v1:0",
         region_name=region,
         temperature=0.1,
         top_k=1.0,
@@ -424,40 +427,17 @@ Finally, you must return only the final article to the user. Do not provide any 
 
 You should iterate between the writing (articleWritingAgent) and review (articleReviewAgent) process to come up with best article.
 
-- You must not iterate the writing and review iteration processes more than 2 times. If you reached the maximum iteration, return the latest draft as the final article.
+- You must not iterate the writing and review iteration processes more than 1 time. If you reached the maximum iteration, return the latest draft as the final article.
 - If any agent returns an error or incomplete output, notify the user with the exact error message.
 - Write your final draft in <final> XML tag.
 """,
         tools=[research_agent, article_generation_agent, article_reviewer_agent]
     )
-    # Process the news facts through the complete workflow
-    # result = interface_supervisor(news_facts)
-    # return result.message['content'][0]['text']
-    try:
-        # Stream each chunk as it becomes available
-        async for event in interface_supervisor.stream_async(news_facts):
-            if "data" in event:
-                yield event["data"]
-            
-    except Exception as e:
-        # Handle errors gracefully in streaming context
-        error_response = {"error": str(e), "type": "stream_error"}
-        print(f"Streaming error: {error_response}")
-        yield error_response
 
-# def agent_entrypoint(payload):
-#     query = payload["query"]
-#     interface_supervisor_agent_response = interface_supervisor_agent(query)
-#     return interface_supervisor_agent_response
-    
-import asyncio
-
-async def main(args):
-    async for value in interface_supervisor_agent(json.loads(args.payload)):
-        pass
+    return interface_supervisor(news_facts)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("payload", type=str)
     args = parser.parse_args()
-    asyncio.run(main(args))
+    interface_supervisor_agent(json.loads(args.payload))

@@ -392,7 +392,8 @@ def interface_supervisor_agent(payload, context=None):
         A professionally written and reviewed news article
     """
     print("Interface Supervisor agent processing...")
-    print("Runtime Session ID:", context.session_id)
+    if context:
+        print("Runtime Session ID:", context.session_id)
     news_facts = payload["query"]
 
     # Create a BedrockModel with specific configuration
