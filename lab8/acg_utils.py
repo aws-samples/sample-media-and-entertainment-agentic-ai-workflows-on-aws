@@ -83,7 +83,7 @@ def setup_cognito_user_pool():
         print(f"Error: {e}")
         return None
 
-def get_or_create_user_pool(cognito, USER_POOL_NAME):
+def get_or_create_user_pool(cognito, USER_POOL_NAME, REGION):
     response = cognito.list_user_pools(MaxResults=60)
     for pool in response["UserPools"]:
         if pool["Name"] == USER_POOL_NAME:
