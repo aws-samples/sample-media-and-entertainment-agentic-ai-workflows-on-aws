@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo apt update && sudo apt install zip -y
 cd lambda
 rm -rf package *.zip
 pip install --target ./package -r requirements.txt
