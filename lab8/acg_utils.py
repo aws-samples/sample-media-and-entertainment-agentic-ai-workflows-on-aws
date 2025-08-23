@@ -162,7 +162,6 @@ def get_token(user_pool_id: str, client_id: str, client_secret: str, scope_strin
             "scope": scope_string,
 
         }
-        print(client_id)
         response = requests.post(url, headers=headers, data=data)
         response.raise_for_status()
         return response.json()
