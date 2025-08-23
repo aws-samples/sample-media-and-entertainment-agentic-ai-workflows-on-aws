@@ -4,7 +4,7 @@ Welcome to the Agentic AI for Media and Entertainment workshop. The goal of this
 
 The main audience for this workshop are developers, solution builders. This workshop introduces agents and workflows from the practical point view. The labs are designed to guide you through agent building processes step by step, from simple workflows like prompt chaining, to the most advanced patterns such as multi agent collaborations. 
 
-The agents in this workshop is built using [Amazon Bedrock Agent](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html), and [Bedrock Flows](https://docs.aws.amazon.com/bedrock/latest/userguide/flows.html), [Amazon Q Business](https://aws.amazon.com/q/business/) and [Strands Agent SDK](https://strandsagents.com/latest/)
+The agents in this workshop is built using [Amazon Bedrock Agent](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html), and [Bedrock Flows](https://docs.aws.amazon.com/bedrock/latest/userguide/flows.html), [Amazon Q Business](https://aws.amazon.com/q/business/), [Strands Agent SDK](https://strandsagents.com/latest/), [Langgraph](https://www.langchain.com/langgraph) and [CrewAI](https://github.com/crewAIInc/crewAI)
 
 Within this series of labs, you'll explore some of the common use cases focused in media and entertainment. You'll learn how to implement agent patterns to build powerful systems that automate repeatable tasks, significantly improving productivity and efficiency across media workflows. These hands-on exercises will demonstrate how AI-powered agents can streamline content creation, metadata management, and other industry-specific processes.
 
@@ -17,6 +17,7 @@ Labs in the workshop include:
 - 05 - Reflection [Estimated time to complete - 60 mins]
 - 06 - Tool Use [Estimated time to complete - 45 mins]
 - 07 - Multi Agent Collaboration [Estimated time to complete - 60 mins]
+- Lab 8 - Productionize Agentic AI Application [Estimated time to complete - 45 minutes]
 
 ## Getting Started
 Depending on the lab, this workshop is run using AWS Console and Python notebooks. For python notebooks, you can run from the environment of your choice. For labs that runs in AWS Console, navigate to the appropriate AWS Account and start the labs by following the instructions.
