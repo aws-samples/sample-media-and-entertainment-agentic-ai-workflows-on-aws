@@ -372,15 +372,7 @@ def create_agentcore_gateway_role(gateway_name):
                 "Principal": {
                     "Service": "bedrock-agentcore.amazonaws.com"
                 },
-                "Action": "sts:AssumeRole",
-                "Condition": {
-                    "StringEquals": {
-                        "aws:SourceAccount": f"{account_id}"
-                    },
-                    "ArnLike": {
-                        "aws:SourceArn": f"arn:aws:bedrock-agentcore:{region}:{account_id}:*"
-                    }
-                }
+                "Action": "sts:AssumeRole"
             }
         ]
     }
