@@ -630,6 +630,7 @@ def delete_gateway(gateway_client,gatewayId):
             targetId = targetId
         )
     print("Deleting gateway ", gatewayId)
+    time.sleep(30)
     gateway_client.delete_gateway(gatewayIdentifier = gatewayId)
 
 def delete_all_gateways(gateway_client):
